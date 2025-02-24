@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>CodeLab1.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+CodeLab1.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">time</span><span class="s2">.</span><span class="s1">LocalDateTime</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">Scanner</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">CodeLab1 </span><span class="s2">{</span>
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+        <span class="s1">String Name</span><span class="s2">;</span>
+        <span class="s1">String Jenis_Kelamin</span><span class="s2">;</span>
+        <span class="s0">int </span><span class="s1">Tahun_lahir</span><span class="s2">;</span>
+        <span class="s1">Scanner input </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Scanner</span><span class="s2">(</span><span class="s1">System</span><span class="s2">.</span><span class="s1">in</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Masukkan nama Anda: &quot;</span><span class="s2">);</span>
+        <span class="s1">Name </span><span class="s2">= </span><span class="s1">input</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">();</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Masukkan jenis kelamin Anda (L/P): &quot;</span><span class="s2">);</span>
+        <span class="s1">Jenis_Kelamin </span><span class="s2">= </span><span class="s1">input</span><span class="s2">.</span><span class="s1">next</span><span class="s2">().</span><span class="s1">toLowerCase</span><span class="s2">();</span>
+        <span class="s0">switch </span><span class="s2">(</span><span class="s1">Jenis_Kelamin</span><span class="s2">) {</span>
+            <span class="s0">case </span><span class="s3">&quot;l&quot;</span><span class="s2">:</span>
+                <span class="s1">Jenis_Kelamin </span><span class="s2">= </span><span class="s3">&quot;Laki-laki&quot;</span><span class="s2">;</span>
+                <span class="s0">break</span><span class="s2">;</span>
+            <span class="s0">case </span><span class="s3">&quot;p&quot;</span><span class="s2">:</span>
+                <span class="s1">Jenis_Kelamin </span><span class="s2">= </span><span class="s3">&quot;Perempuan&quot;</span><span class="s2">;</span>
+                <span class="s0">break</span><span class="s2">;</span>
+            <span class="s0">default</span><span class="s2">:</span>
+                <span class="s1">Jenis_Kelamin </span><span class="s2">= </span><span class="s3">&quot;Tidak Ada&quot;</span><span class="s2">;</span>
+                <span class="s0">break</span><span class="s2">;</span>
+        <span class="s2">}</span>
+
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Masukkan tahun lahir Anda: &quot;</span><span class="s2">);</span>
+        <span class="s1">Tahun_lahir </span><span class="s2">= </span><span class="s1">input</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+        <span class="s1">Tahun_lahir </span><span class="s2">= </span><span class="s1">LocalDateTime</span><span class="s2">.</span><span class="s1">now</span><span class="s2">().</span><span class="s1">getYear</span><span class="s2">() - </span><span class="s1">Tahun_lahir</span><span class="s2">;</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;</span><span class="s0">\n\n</span><span class="s3">&quot;</span><span class="s2">);</span>
+
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Data Diri&quot;</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Nama Anda: &quot; </span><span class="s2">+ </span><span class="s1">Name</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Jenis Kelamin Anda: &quot; </span><span class="s2">+ </span><span class="s1">Jenis_Kelamin</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Umur Anda: &quot; </span><span class="s2">+ </span><span class="s1">Tahun_lahir</span><span class="s2">);</span>
+
+    <span class="s2">}</span>
+<span class="s2">}</span></pre>
+</body>
+</html>
